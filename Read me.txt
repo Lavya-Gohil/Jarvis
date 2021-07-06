@@ -1,5 +1,28 @@
 You will need to install python version 3.9 or higher for this project.
 
+============================================================================================================
+
+Some important commands:
+
+1)You will need to say 'wake up' for jarvis to start
+2)You can stop jarvis by saying 'goodbye' or 'bye'
+
+============================================================================================================
+
+For jarvis to work You will need to setup facial recognition.
+
+Steps to do it:
+
+1)go to sample generator.py
+2)run the code
+3)Now go to face recognition.py
+4)it will read and recognise your face
+5)Now go to modeltrainer.py and your model face will be trained
+6)You are set for the facial recognition!
+7)Now you can use this feature
+
+============================================================================================================
+
 How to install modules:
 
 1)start cmd
@@ -45,3 +68,7 @@ email.mime.text import MIMEText
 email.mime.base import MIMEBase
 email import encoders
 googletrans
+
+============================================================================================================
+
+More updates to come!
