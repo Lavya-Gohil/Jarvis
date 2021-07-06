@@ -134,7 +134,7 @@ def Corona(Country):
 def WhatsApp():
     speak("Tell me the name of the person you want to send the message")
     name = takeCommand()
-    if 'Ashish' in name:
+    if 'users-name' in name:
         speak("Tell me the nessage!")
         msg = takeCommand()
         speak("Tell me the time sir")
@@ -147,7 +147,7 @@ def WhatsApp():
     else:
         speak("Tell me the phone number")
         phone = int(takeCommand())
-        ph = '+968' + phone
+        ph = 'country code' + phone
         speak("Tell me the nessage!")
         msg = takeCommand()
         speak("Tell me the time sir")
@@ -436,63 +436,7 @@ def TaskExecution():
             speak("Please wait sir, I am finding the latest news for you")
             news()
 
-        elif 'email to mum' in query:
-            speak("Sir what should I say")
-            query = takeCommand().lower()
-            if "send a file" in query:
-                email = "aibot.lavya@gmail.com"
-                password = "lavya@1610"
-                send_to_email = 'arit.gohil16@gmail.com'
-                speak("Ok isr, what is the subject for this email?")
-                query = takeCommand().lower()
-                subject = query
-                speak("And sir, what is the message for this email")
-                query2 = takeCommand().lower()
-                message = query2
-                speak("sir please enter the correct path of the file into the shell")
-                file_location = input("Pls enter the path of the file here:")
-
-                speak("Please wait I am sending this email now")
-
-                msg = MIMEMultipart()
-                msg['From'] = email
-                msg['To'] = send_to_email
-                msg['Subject'] = subject
-
-                msg.attach(MIMEText(message, 'plain'))
-
-                filename = os.path.basename(file_location)
-                attachment = open(file_location, "rb")
-                part = MIMEBase('application', 'octet-stream')
-                part.set_payload(attachment.read())
-                encoders.encode_base64(part)
-                part.add_header('Content-Dispution', "attachment; filename= %s" % filename)
-
-                msg.attach(part)
-
-                server = smtplib.SMTP('smtp.gmail.com', 587)
-                server.starttls()
-                server.login(email, password)
-                text = msg.as_string()
-                server.sendmail(email, send_to_email, text)
-                server.quit
-                speak("Email has been sent to Arti")
-
-            else:
-
-                email = "aibot.lavya@gmail.com"
-                password = "lavya@1610"
-                send_to_email = 'arti.gohil16@gmail.com'
-                message = query
-
-                server = smtplib.SMTP('smtp.gmail.com', 587)
-                server.starttls()
-                server.login(email, password)
-                server.sendmail(email, send_to_email, message)
-                server.quit
-                speak("Email has been sent to Arti")                 
-
-        elif 'email to lavya' in query:
+        elif 'email to name' in query:
             speak("Sir what should I say")
             query = takeCommand().lower()
             if "send a file" in query:
