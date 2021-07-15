@@ -804,3 +804,13 @@ cv2.destroyAllWindows()
 #
 #    else:
 #        speak("Access denied") 
+
+
+
+
+
+
+
+
+
+##Get this f**king code viral
